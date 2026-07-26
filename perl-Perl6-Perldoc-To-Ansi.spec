@@ -1,15 +1,13 @@
 %define upstream_name    Perl6-Perldoc-To-Ansi
-%define upstream_version 0.11
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.11
+Release:	7
 
 Summary:	ANSI-colored text renderer for Perl6::Perldoc
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/hinrik/perl6-perldoc-to-ansi
-Source0:	https://cpan.metacpan.org/authors/id/H/HI/HINRIK/Perl6-Perldoc-To-Ansi-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/H/HI/HINRIK/Perl6-Perldoc-To-Ansi-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ constructs are highlighted with ANSI terminal codes. See the
 Perl6::Perldoc::To::Text manpage for more information.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
